@@ -10,7 +10,7 @@
 
         $scope.checkIfTooMuch = function(){
             var lunchFood = $scope.lunch.split(',');
-            console.log(lunchFood);
+            
             if(lunchFood==""){
                 $scope.result='Please enter data first';
                 document.body.style.color = "#f00";
