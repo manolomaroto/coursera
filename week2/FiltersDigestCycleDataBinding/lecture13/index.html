@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es" ng-app="MsgApp">
+    <head>
+        <title>Filtros personalizados</title>
+        <meta charset="utf-8">
+        <script src="../../angular.min.js"></script>
+        <script src="app.js"></script>
+        <style>body{font-size:1.2em}</style>
+    </head>
+    <body>
+        <h1>Filtros personalizados</h1>
+        <div ng-controller="MsgController">
+            {{name}} tiene un mensaje para ti <br>
+            Original: {{sayMessage()}} <br>
+            Nuevo: {{sayLovesMessage()}} <br>
+            Verdadero: {{sayLovesMessage() | truth : 'saludables' : 'dulces' }} <br>
+            GRAN VERDAD: {{sayLovesMessage() | truth : 'saludables' : 'dulces' | uppercase }} <br>
+            <input type="button" value="Alimenta a Manolo" ng-click="feedManolo()">
+            <br>
+            <img ng-src="../images/manolo_{{stateOfBeing}}.png" alt="">
+        </div>
+    </body>
+</html>
